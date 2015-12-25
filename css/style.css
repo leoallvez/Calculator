@@ -24,8 +24,10 @@ td{
 	height: 100%;
 	border-radius: 7px;
 	border: 0px;
-	margin-bottom: 10px;
-	margin-top: 10px;	
+	margin-bottom: 25px;
+	margin-top: 15px;
+	position: relative;
+	font-size: 1.5em;
 }
 
 input.b{

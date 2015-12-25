@@ -5,78 +5,81 @@
 	<title>Calculator</title>
 	<link rel="stylesheet" href="../css/style.css">
 </head>
+	<script src="../javascript/calcula.js"></script>
 	<body>
-		<table border="2">
-			<tr>
-				<td colspan="4">
-					<input type="text" id="screen">
-				</td>
+		<form name="Cal"><!--Inicio de um formulário-->
+			<table border="2">
+				<tr>
+					<td colspan="4">
+						<input type="text" id="screen" name="Input" size=10 maxlength=10>
+					</td>
 
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input type="button"class="b" value="C">
-				</td>
-				<td>
-					<input type="button"class="b" value="<">
-				</td>	
-				<td>
-					<input type="button"class="b" value="/">
-				</td>	
-			</tr>
-			<tr>
-				<td>
-					<input type="button"class="b" value="7">
-				</td>
-				<td>
-					<input type="button"class="b" value="8">
-				</td>
-				<td>
-					<input type="button"class="b" value="9">
-				</td>
-				<td>
-					<input type="button"class="b" value="*">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button"class="b" value="4">
-				</td>
-				<td>
-					<input type="button"class="b" value="5">
-				</td>
-				<td>
-					<input type="button"class="b" value="6">
-				</td>
-				<td>
-					<input type="button"class="b" value="-">
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<input type="button"class="b" value="1">
-				</td>
-				<td>
-					<input type="button"class="b" value="2">
-				</td>
-				<td>
-					<input type="button"class="b" value="3">
-				</td>
-				<td>
-					<input type="button"class="b" value="+">
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<input type="button"class="b" value="0">
-				</td>
-				<td>
-					<input type="button"class="b" value=",">
-				</td>	
-				<td>
-					<input type="button"class="b" value="=">
-				</td>
-			</tr>
-		</table>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="button"class="b" value="C" onClick="clean()">
+					</td>
+					<td>
+						<input type="button"class="b" value="<">
+					</td>	
+					<td>
+						<input type="button"class="b" value="/" onClick="add('/')">
+					</td>	
+				</tr>
+				<tr>
+					<td>
+						<input type="button"class="b" value="7" onClick="add('7')">
+					</td>
+					<td>
+						<input type="button"class="b" value="8" onClick="add('8')">
+					</td>
+					<td>
+						<input type="button"class="b" value="9" onClick="add('9')">
+					</td>
+					<td>
+						<input type="button"class="b" value="*" onClick="add('*')">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button"class="b" value="4" onClick="add('4')">
+					</td>
+					<td>
+						<input type="button"class="b" value="5" onClick="add('5')">
+					</td>
+					<td>
+						<input type="button"class="b" value="6" onClick="add('6')">
+					</td>
+					<td>
+						<input type="button"class="b" value="-" onClick="add('-')">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="button"class="b" value="1" onClick="add('1')">
+					</td>
+					<td>
+						<input type="button"class="b" value="2" onClick="add('2')">
+					</td>
+					<td>
+						<input type="button"class="b" value="3" onClick="add('3')">
+					</td>
+					<td>
+						<input type="button"class="b" value="+" onClick="add('+')">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="button"class="b" value="0" onClick="add('0')">
+					</td>
+					<td>
+						<input type="button"class="b" value="." onClick="add('.')">
+					</td>	
+					<td>
+						<input type="button"class="b" value="=" onClick="result()">
+					</td>
+				</tr>
+			</table>
+		</form>
 	</body>
 </html>
