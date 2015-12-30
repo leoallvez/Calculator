@@ -28,6 +28,7 @@ td{
 	margin-top: 15px;
 	position: relative;
 	font-size: 1.5em;
+	text-indent: 5px;
 }
 
 input.b{
@@ -40,6 +41,10 @@ input.b{
 	background-color: #333;/*Grey*/
 	font-size: 1.4em;
 	transition: background-color 1s;
+}
+
+input.b#back{
+	font-size: 0.9em;
 }
 
 input.b:hover{
