@@ -27,8 +27,12 @@ td{
 	margin-bottom: 25px;
 	margin-top: 15px;
 	position: relative;
-	font-size: 1.5em;
+	font-size: 2em;
+	text-align: right;
 	text-indent: 5px;
+	letter-spacing: 5px; /*Espaço entre letras*/
+	color: #333;
+	font-family: monospace;
 }
 
 input.b{
