@@ -33,6 +33,10 @@ td{
 	letter-spacing: 5px; /*Espaço entre letras*/
 	color: #333;
 	font-family: monospace;
+	transition: box-shadow 1s;
+}
+#screen:hover{
+	box-shadow: inset 1px 1px 1px 1px #000;
 }
 
 input.b{

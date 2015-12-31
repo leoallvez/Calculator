@@ -1,11 +1,15 @@
 var oper = new Array("*","-","+","/",".");
 var numb = new Array("0","1","2","3","4","5","6","7","8","9");
-var last = "0"; /*Variavel de último operador ou número digitado*/
+var last = "*"; /*Variavel de último operador ou número digitado*/
 
 function backSpace(){
 	var n = document.Cal.Input.value.length;
 	/*Metodo slice() retorna partes de uma string*/
 	var str = document.Cal.Input.value.slice(0,n-1);
+	if(str == ""){
+		str = "0";
+		last = "*";
+	}
 	document.Cal.Input.value = str;
 }
 
@@ -49,7 +53,7 @@ function add(s){
 /*Essa função limpa a tela e seta a variavel last*/
 function clean(){
 	document.Cal.Input.value = "0";
-	last = "0";
+	last = "*";
 }
 /*Essa função realiza a operação na tela e imprime o resultado*/
 function result(){
