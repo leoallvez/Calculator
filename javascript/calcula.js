@@ -3,19 +3,19 @@ var numb = new Array("0","1","2","3","4","5","6","7","8","9");
 var last = "*"; /*Variavel de último operador ou número digitado*/
 
 function backSpace(){
-	var n = document.Cal.Input.value.length;
+	var n = document.getElementById("screen").value.length;
 	/*Metodo slice() retorna partes de uma string*/
-	var str = document.Cal.Input.value.slice(0,n-1);
+	var str = document.getElementById("screen").value.slice(0,n-1);
 	if(str == ""){
 		str = "0";
 		last = "*";
 	}
-	document.Cal.Input.value = str;
+	document.getElementById("screen").value = str;
 }
 
 function maxLenght(){
 	var x = false
-	if(document.Cal.Input.value.length > 10){
+	if(document.getElementById("screen").value.length > 10){
 		x = true;
 	}
 	return x;
@@ -44,23 +44,25 @@ function isOperador(){
 function add(s){
 	if(!isOperador() || isNumber(s)){
 		if(!maxLenght() && last != "Erro"){
-			if(document.Cal.Input.value == "0" && s != "."){document.Cal.Input.value = ""}
+			if(document.getElementById("screen").value == "0" && s != "."){
+				document.getElementById("screen").value = ""
+			}
 			last = s;
-			document.Cal.Input.value += s;
+			document.getElementById("screen").value += s;
 		}
 	}
 }
 /*Essa função limpa a tela e seta a variavel last*/
 function clean(){
-	document.Cal.Input.value = "0";
+	document.getElementById("screen").value = "0";
 	last = "*";
 }
 /*Essa função realiza a operação na tela e imprime o resultado*/
 function result(){
 	if(!maxLenght()){
-		document.Cal.Input.value = eval(document.Cal.Input.value);
+		document.getElementById("screen").value = eval(document.getElementById("screen").value);
 	}else{
 		last = "Erro";
-		document.Cal.Input.value = last;
+		document.getElementById("screen").value = last;
 	}
 }
